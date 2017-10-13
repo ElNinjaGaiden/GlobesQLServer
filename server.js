@@ -10,7 +10,7 @@ import compression from 'compression';
 import helmet from 'helmet';
 
 import { schema } from './src/schema';
-import { clientOrigin } from './src/config';
+import { clientOrigin, wsSubscriptionsEndpoint } from './src/config';
 
 import { execute, subscribe } from 'graphql';
 import { createServer } from 'http';
@@ -31,7 +31,7 @@ server.use('/graphql', bodyParser.json(), graphqlExpress({
 
 server.use('/graphiql', graphiqlExpress({
   endpointURL: '/graphql',
-  subscriptionsEndpoint: `ws://localhost:4000/subscriptions`
+  subscriptionsEndpoint: wsSubscriptionsEndpoint
 }));
 
 // We wrap the express server so that we can attach the WebSocket for subscriptions

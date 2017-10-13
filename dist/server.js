@@ -49,7 +49,7 @@ server.use('/graphql', _bodyParser2.default.json(), (0, _graphqlServerExpress.gr
 
 server.use('/graphiql', (0, _graphqlServerExpress.graphiqlExpress)({
   endpointURL: '/graphql',
-  subscriptionsEndpoint: 'ws://localhost:4000/subscriptions'
+  subscriptionsEndpoint: _config.wsSubscriptionsEndpoint
 }));
 
 // We wrap the express server so that we can attach the WebSocket for subscriptions
