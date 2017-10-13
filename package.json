@@ -28,6 +28,7 @@
     "graphql-subscriptions": "^0.4.3",
     "graphql-tools": "^1.0.0",
     "helmet": "^3.9.0",
+    "lodash": "^4.17.4",
     "subscriptions-transport-ws": "^0.7.3"
   },
   "engines": {
