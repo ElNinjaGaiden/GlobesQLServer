@@ -7,8 +7,8 @@ import {
   
   const typeDefs = `
   type Globe {
-    id: Int!                # "!" denotes a required field
-    type: Int! # 3 types: 1, 2 or 3
+    id: Int!    # "!" denotes a required field
+    type: Int!  # 3 types: 1, 2 or 3
   }
   
   input GlobeInput {
